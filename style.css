@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Bellota|Bellota+Text&display=swap');
+
+*{
+  box-sizing:border-box;  
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:0;
+  margin:0;
+}
+
+main{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family:'Bellota Text', cursive;
+}
+
+h1{
+  margin:50px 0px 0px;
+  font-family:'Bellota', cursive
+}
+
+/* main content */
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  position: relative;
+  max-width: 90vw;
+  width: 800px;
+}
+
+.img-container{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+  padding: 0 0 10px;
+  margin: 0 3px;
+  height: 450px;
+  width: 50%;
+}
+
+.dog{
+  width:100%;
+  height:75%;
+  border-radius:20px;
+  border:black double 6px;
+  object-fit:fill; /* not ie compatiable  todo: add ie fix */ 
+}
+
+.or{
+  position:absolute;
+  display:flex;
+  top:50%;
+  left:50%;
+  justify-content:center;
+  align-items:center;
+  background:#FFABAB;
+  font-size:1.5rem;
+  border:black solid 1px;
+  border-radius:50%;
+  height:50px;
+  width:50px;
+  transform:translate(-50%,-140%);
+  margin:0;
+  padding:10px;
+}
+
+#this, #that{
+	background:transparent;
+	border:black 2px solid;
+	border-radius:3px;
+	transition:background 0.3s ease-in-out;
+	margin-top:10px;
+	padding:10px;
+	text-transform:uppercase;
+	font-size:2em;
+}
+
+#this:hover{
+	cursor:pointer;
+	background:#AFF8D8;
+}
+
+#that:hover{
+	cursor:pointer;
+	background:#85E3FF;
+}
+
+footer{
+  display:flex;
+  padding:10px 0px 0px 0px;
+  font-family:'Bellota Text', cursive;
+  font-size:14px;
+  align-items:center;
+  justify-content:space-around;
+  position:fixed;
+  top:0;
+  background-color:black;
+  color:white;
+  width:100vw;
+}
+
+footer > h2{
+  margin:0;
+  padding:0 10px;
+}
+
+#projectSrcBtn{
+  background:transparent;
+  color:white;
+  border-radius:20px;
+  text-decoration:none;
+  border:1px solid white;
+  padding:5px;
+  margin-bottom:10px;
+}
+
+@media (max-width: 400px){
+	.container{
+		flex-wrap:wrap;
+	}
+	.or{
+		top:52%;
+		
+	}
+	.img-container{
+		margin:10px;
+		min-width:300px;
+	}
+  footer{
+    display:block;
+  }
+  footer > h2{
+    font-size:1em;
+  }
+  #projectSrcBtn{
+    position:absolute;
+    top:5px;
+    font-size:0.5em;
+    right:20px;
+  }
+}
